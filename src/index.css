@@ -1,3 +1,53 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.scrollbar-hide::-webkit-scrollbar {
+    display:none; 
+}
+
+ */
+
+
+
+/* index.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers */
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer and Edge */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+/* Hide scrollbar specifically on x-axis */
+.scrollbar-hide-x::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide-x {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-x: auto; /* Ensure horizontal scroll is enabled */
+    overflow-y: hidden; /* Hide vertical scrollbar if needed */
+}
+
+Body{
+    overflow-x:hidden;
+    overflow-y: hidden;
+    overflow-y:scroll;
+
+}
+
+::-webkit-scrollbar{
+    width:0;
+}
+#scrollbar-hide {
+    overflow: hidden;
+}
