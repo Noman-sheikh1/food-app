@@ -68,3 +68,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### CSS Styling in Tailwind:
+sticky: Keeps the element fixed when scrolling.
+top-0: Ensures the element sticks to the top.
+z-50: Ensures the header stays above other elements.
+mt-16: Adds a margin-top of 16 units, which provides space between the header and the rest of the content.
