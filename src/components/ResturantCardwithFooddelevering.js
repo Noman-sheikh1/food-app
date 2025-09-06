@@ -3,10 +3,8 @@ const ResturantCardwithFooddelevering = ({ listOfRestaurants }) => {
     return (
         <div className="flex flex-row flex-wrap p-3 m-2 scrollbar-hide"> 
         { listOfRestaurants.map((restaurants)=>(
-         
-           
-          
-              <RestaurantCard  resData={restaurants}/>
+            
+<RestaurantCard  resData={restaurants}/>
           ))}
           </div>
     );

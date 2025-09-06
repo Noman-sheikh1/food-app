@@ -1,25 +1,38 @@
-const RestaurantCard = (props) => {
-  const { resData } = props;
 
-  return (
-    <div className="border  bg-gray-100 hover:bg-gray-200  m-2 p-2 border-solid w-[300px] flex flex-col box-border transform transition duration-200   hover:scale-95 cursor-pointer rounded-bl-lg rounded-br-lg rounded-tl-lg rounded-tr-lg">
-        <div>
-      <img
-        className="w-[265px] h-[170.325px] object-cover rounded-md"
-        src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${resData?.info?.cloudinaryImageId}`}
-        alt={resData?.info?.name || "Restaurant Image"}
-      />
-      </div>
-      <div>
-      <h3 className="font-bold text-lg mt-2">{resData?.info?.name}</h3>
-      <h4 className="max-w-full flex flex-wrap break-words whitespace-normal mb-2">
-        {resData?.info?.cuisines.join(", ")}
-      </h4>
-      <h4>{resData?.info?.avgRating} stars</h4>
-      </div>
-    </div>
-  );
+import { IMG_logo } from "../utils/constants";
+
+const RestaurantCard = ({resData}) => {
+    const{      
+        name,
+        avgRatingString,
+        cuisines,
+        sla,
+        costForTwo,
+        cloudinaryImageId,
+    } = resData?.info;
+    //console.log(resData);
+    return (
+        <div className="w-[270px] m-2 cursor-pointer transform transition duration-200 hover:scale-95">
+            {/* <div className="font_bold text-2xl m-4">{header?.title}</div> */}
+            <div>
+                <img
+                    className="w-[250px] h-[180px] rounded-3xl p-2 mt-4 ml-2"
+                    src={IMG_logo + cloudinaryImageId}
+                    alt="restaurantcard_img"
+                />
+            </div>
+            <div className="flex flex-col items-start p-4 ">
+                <h2 className="font-bold text-lg">{name}</h2>
+                <div className="flex items-center text-gray-700">
+                    <span>{avgRatingString}</span>
+                    <span className="ml-2">⭐</span>
+                </div>
+                <p className="text-gray-700">{cuisines.join(", ")}</p>
+                <p className="text-gray-700">{sla?.slaString}</p>
+                <p className="text-gray-700">{costForTwo}</p>
+            </div>
+        </div>
+    );
 };
 
 export default RestaurantCard;
-

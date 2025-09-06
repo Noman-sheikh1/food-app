@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -70,22 +68,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-### CSS Styling in Tailwind:
-
-sticky: Keeps the element fixed when scrolling.
-top-0: Ensures the element sticks to the top.
-z-50: Ensures the header stays above other elements.
-mt-16: Adds a margin-top of 16 units, which provides space between the header and the rest of the content.
-=======
-
-# food-app
-
-project of frontend on clone of food-app
-
-> > > > > > > 7010fd1aa8dc1d910585b12ac35d817af70a03ca
-
-### something about hover property i use in header component 
-
-In Tailwind CSS, you cannot combine two different styles (like color and cursor) under a single hover utility. You need to use separate hover: prefixes for each condition (color and cursor) as they control different properties.me propeerties about hover
-

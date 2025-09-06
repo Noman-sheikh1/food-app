@@ -1,25 +1,16 @@
-import './App.css';
-import Header from './components/Header';
-import Body from './components/Body';
-
-
-function App() {
-  return (
-    <div className=" w-full h-full flex flex-col space-y-4">
-       <div>
-       <Header />
-       </div>
-      <Header />
-     
-       
-       
-      <div className=' mx-auto ml-16 mr-24'>
-      <Body/>
+import { Outlet } from "react-router-dom";
+import Header from "./components/Header";
+import { Provider } from "react-redux";
+import appStore from "./utils/Appstore";
+const App=()=>{
+  return(
+    <Provider store={appStore}>
+      <div>
+         <Header/>
+         <Outlet/>
       </div>
+    </Provider>
       
-      
-    </div>
-  );
+  )
 }
-
 export default App;
